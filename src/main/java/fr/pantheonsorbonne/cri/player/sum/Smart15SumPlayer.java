@@ -1,14 +1,14 @@
 package fr.pantheonsorbonne.cri.player.sum;
 
-import fr.pantheonsorbonne.cri.grid.sum.GridSum;
+import fr.pantheonsorbonne.cri.grid.sum.SumGrid;
 
-public class SumPlayerSmart15 extends SumPlayerSmart {
-    public SumPlayerSmart15(String name) {
+public class Smart15SumPlayer extends SmartSumPlayer {
+    public Smart15SumPlayer(String name) {
         super(name);
     }
 
     @Override
-    protected boolean playOpening(GridSum grid) {
+    protected boolean playOpening(SumGrid grid) {
         if (grid.isEmpty()) {
             grid.set(1, 1, 9);
             return true;

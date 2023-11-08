@@ -4,13 +4,13 @@ import fr.pantheonsorbonne.cri.player.Player;
 
 import java.util.Random;
 
-public abstract class GameAlternateTurn extends GameImpl {
+public abstract class AlternateTurnGame extends GameImpl {
 
     private final Random random = new Random();
 
     protected Player currentPlayer;
 
-    public GameAlternateTurn(Player player1, Player player2) {
+    public AlternateTurnGame(Player player1, Player player2) {
         super( player1, player2);
     }
 

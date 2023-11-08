@@ -2,10 +2,10 @@ package fr.pantheonsorbonne.cri.player.sum;
 
 import fr.pantheonsorbonne.cri.player.DumbPlayer;
 
-public class SumPlayerDumb extends DumbPlayer {
+public class DumbSumPlayer extends DumbPlayer {
 
 
-    public SumPlayerDumb(String name) {
+    public DumbSumPlayer(String name) {
         super(name);
     }
 

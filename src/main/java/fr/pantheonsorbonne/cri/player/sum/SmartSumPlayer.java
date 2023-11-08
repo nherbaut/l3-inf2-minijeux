@@ -2,20 +2,20 @@ package fr.pantheonsorbonne.cri.player.sum;
 
 import fr.pantheonsorbonne.cri.grid.DiagonalSpec;
 import fr.pantheonsorbonne.cri.grid.Grid;
-import fr.pantheonsorbonne.cri.grid.sum.GridSum;
+import fr.pantheonsorbonne.cri.grid.sum.SumGrid;
 
-public abstract class SumPlayerSmart extends SumPlayerDumb {
+public abstract class SmartSumPlayer extends DumbSumPlayer {
 
-    public SumPlayerSmart(String name) {
+    public SmartSumPlayer(String name) {
         super(name);
     }
 
     @Override
     public void play(Grid g) {
-        if (!(g instanceof GridSum)) {
+        if (!(g instanceof SumGrid)) {
             throw new RuntimeException("unsupported grid type");
         }
-        GridSum grid = (GridSum) g;
+        SumGrid grid = (SumGrid) g;
 
         if(playOpening(grid)){
             return;
@@ -60,7 +60,7 @@ public abstract class SumPlayerSmart extends SumPlayerDumb {
 
     }
 
-    protected abstract boolean playOpening(GridSum gridSum);
+    protected abstract boolean playOpening(SumGrid sumGrid);
 
     private static Integer[] getNextOtherPlayable(Integer p, Integer[] playable) {
         Integer nextPlayable[] = new Integer[playable.length];
@@ -70,7 +70,7 @@ public abstract class SumPlayerSmart extends SumPlayerDumb {
         return nextPlayable;
     }
 
-    private int[] getNextWinningMove(GridSum grid, Integer[] playable) {
+    private int[] getNextWinningMove(SumGrid grid, Integer[] playable) {
         //look for winning lines
         for (int i = 0; i < Grid.size; i++) {
             int leftToWin = getTargetSum() - grid.getLine(i).sum(true);

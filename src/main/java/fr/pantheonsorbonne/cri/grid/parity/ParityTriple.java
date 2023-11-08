@@ -2,8 +2,8 @@ package fr.pantheonsorbonne.cri.grid.parity;
 
 import fr.pantheonsorbonne.cri.grid.Triple;
 
-public class TripleParity extends Triple {
-    public TripleParity(Integer x, Integer y, Integer z) {
+public class ParityTriple extends Triple {
+    public ParityTriple(Integer x, Integer y, Integer z) {
         super(x, y, z);
     }
 

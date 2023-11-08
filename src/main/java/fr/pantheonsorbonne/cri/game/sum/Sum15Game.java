@@ -1,22 +1,22 @@
 package fr.pantheonsorbonne.cri.game.sum;
 
-import fr.pantheonsorbonne.cri.game.GameAlternateTurn;
+import fr.pantheonsorbonne.cri.game.AlternateTurnGame;
 import fr.pantheonsorbonne.cri.game.LineColDiaWinninGame;
 import fr.pantheonsorbonne.cri.player.Player;
-import fr.pantheonsorbonne.cri.grid.sum.GridSum;
+import fr.pantheonsorbonne.cri.grid.sum.SumGrid;
 
-public class Sum15Game extends GameAlternateTurn implements LineColDiaWinninGame {
+public class Sum15Game extends AlternateTurnGame implements LineColDiaWinninGame {
 
-    GridSum grid;
+    SumGrid grid;
 
     public Sum15Game(Player player1, Player player2) {
         super(player1, player2);
-        this.grid = new GridSum(15);
+        this.grid = new SumGrid(15);
     }
 
 
     @Override
-    public GridSum getGrid() {
+    public SumGrid getGrid() {
         return this.grid;
     }
 

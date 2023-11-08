@@ -4,9 +4,9 @@ import fr.pantheonsorbonne.cri.grid.Triple;
 
 import java.util.Objects;
 
-public class TripleSummation extends Triple {
+public class SumTriple extends Triple {
     int winningSum;
-    public TripleSummation(int winningSum,Integer x, Integer y, Integer z) {
+    public SumTriple(int winningSum, Integer x, Integer y, Integer z) {
         super(x, y, z);
         this.winningSum=winningSum;
     }

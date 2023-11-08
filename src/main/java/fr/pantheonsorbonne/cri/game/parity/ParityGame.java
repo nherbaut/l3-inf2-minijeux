@@ -1,18 +1,18 @@
 package fr.pantheonsorbonne.cri.game.parity;
 
-import fr.pantheonsorbonne.cri.game.GameAlternateTurn;
+import fr.pantheonsorbonne.cri.game.AlternateTurnGame;
 import fr.pantheonsorbonne.cri.game.LineColDiaWinninGame;
 import fr.pantheonsorbonne.cri.grid.Grid;
-import fr.pantheonsorbonne.cri.grid.parity.GridParity;
+import fr.pantheonsorbonne.cri.grid.parity.ParityGrid;
 import fr.pantheonsorbonne.cri.player.Player;
 
-public class ParityGame extends GameAlternateTurn implements LineColDiaWinninGame {
+public class ParityGame extends AlternateTurnGame implements LineColDiaWinninGame {
 
-    GridParity gridParity;
+    ParityGrid gridParity;
 
     public ParityGame(Player player1, Player player2) {
         super(player1, player2);
-        this.gridParity=new GridParity();
+        this.gridParity=new ParityGrid();
     }
 
     @Override
